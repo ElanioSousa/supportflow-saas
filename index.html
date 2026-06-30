@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Central de Ajuda</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar card" aria-label="Menu lateral">
+      <div class="brand">
+        <div class="brand-icon">🎓</div>
+        <div>
+          <h1>Manuais</h1>
+          <span>Manual e central de ajuda</span>
+        </div>
+      </div>
+
+      <p class="nav-title">Menu</p>
+      <nav>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#inicio">🏠 Página inicial</a></li>
+          <li><a class="nav-link" href="#comece">🚀 Comece Aqui</a></li>
+          <li><a class="nav-link" href="#clientes">👥 Clientes, Leads e Negociações</a></li>
+          <li><a class="nav-link" href="#operacoes">⚙️ Operações</a></li>
+          <li><a class="nav-link" href="#financeiro">💰 Financeiro</a></li>
+          <li><a class="nav-link" href="#relatorios">📊 Relatórios e Indicadores</a></li>
+          <li><a class="nav-link" href="#configuracoes">🛠️ Configurações do Sistema</a></li>
+          <li><a class="nav-link" href="#faq">❓Problemas Frequentes</a></li>
+          <li><a class="nav-link" href="#novidades">✨ Novidades da Plataforma</a></li>
+          <li><a class="nav-link" href="#treinamentos">📺 Treinamentos Completos</a></li>
+          <li><a class="nav-link" href="form.html">➕ Novo treinamento</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-help">
+        <strong>💡 Não encontrou o que precisa?</strong>
+        <p>Use a busca no topo da página ou acesse a lista de problemas frequentes.</p>
+        <a class="button secondary" href="#faq">Ver problemas frequentes →</a>
+      </div>
+    </aside>
+
+    <main class="main-content" id="inicio">
+      <section class="hero">
+        <span class="eyebrow">✨ Aprenda com autonomia</span>
+        <h2>Encontre tutoriais, manuais e respostas rápidas para usar nosso sistema.</h2>
+        <p>Uma central organizada por áreas, treinamentos por módulo, artigos populares e novidades da plataforma para acelerar o uso do seu SaaS.</p>
+
+        <form class="search-box" onsubmit="event.preventDefault(); alert('Busca demonstrativa: conecte este campo à sua base de artigos.');">
+          <input type="search" placeholder="Busque por lead, operação, conciliação, relatórios..." aria-label="Buscar artigos" />
+          <button type="submit" aria-label="Pesquisar">🔎</button>
+        </form>
+
+        <div style="margin-top: 20px;">
+          <a class="button" href="form.html">➕ Novo treinamento</a>
+        </div>
+      </section>
+
+      <section class="section" id="comece">
+        <div class="section-header">
+          <div>
+            <h3>🗂️ Navegue por área</h3>
+            <p>Escolha um módulo para encontrar artigos, tutoriais e orientações.</p>
+          </div>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card" id="clientes">
+            <div class="category-icon">👥</div>
+            <h4>Clientes, Leads e Negociações</h4>
+            <p>Gerencie leads, negociações, contatos e atendimentos.</p>
+            <a class="article-count" href="#">21 artigos adicionados →</a>
+          </article>
+
+          <article class="category-card" id="operacoes">
+            <div class="category-icon">⚙️</div>
+            <h4>Operações</h4>
+            <p>Acompanhe suas operações, pendências e processos.</p>
+            <a class="article-count" href="#">18 artigos adicionados →</a>
+          </article>
+
+          <article class="category-card" id="financeiro">
+            <div class="category-icon">💰</div>
+            <h4>Financeiro</h4>
+            <p>Lançamentos, títulos, conciliação e relatórios.</p>
+            <a class="article-count" href="#">24 artigos adicionados →</a>
+          </article>
+
+          <article class="category-card" id="relatorios">
+            <div class="category-icon">📊</div>
+            <h4>Relatórios e Indicadores</h4>
+            <p>Relatórios gerenciais e indicadores da plataforma.</p>
+            <a class="article-count" href="#">15 artigos adicionados →</a>
+          </article>
+
+          <article class="category-card" id="configuracoes">
+            <div class="category-icon">🛠️</div>
+            <h4>Configurações do Sistema</h4>
+            <p>Cadastros, parâmetros, usuários e integrações.</p>
+            <a class="article-count" href="#">19 artigos adicionados →</a>
+          </article>
+
+          <article class="category-card" id="faq">
+            <div class="category-icon">❓</div>
+            <h4>Problemas Frequentes</h4>
+            <p>Soluções rápidas para os problemas mais comuns.</p>
+            <a class="article-count" href="#">27 artigos adicionados →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="treinamentos">
+        <div class="section-header">
+          <div>
+            <h3>📺 Treinamentos completos por módulo</h3>
+            <p>Conteúdos em vídeo e manuais para aprender o fluxo completo de cada área.</p>
+          </div>
+          <a class="button" href="form.html">➕ Novo treinamento</a>
+        </div>
+
+        <!-- LISTA DINÂMICA: os treinamentos fixos e os cadastrados no form.html serão renderizados aqui -->
+        <div class="training-list" id="listaTreinamentos"></div>
+
+        <div class="tip">💡 <strong>Dica:</strong> Salve esta página nos favoritos e use a barra de busca do navegador para encontrar o que precisa com mais rapidez.</div>
+      </section>
+    </main>
+
+    <aside class="right-panel" aria-label="Conteúdo adicional">
+      <section class="side-card card">
+        <h3>📑 Artigos mais acessados</h3>
+        <ul class="popular-list">
+          <li><a href="#">📄 Como cadastrar um lead? <span>→</span></a></li>
+          <li><a href="#">📄 Como criar uma negociação? <span>→</span></a></li>
+          <li><a href="#">📄 Como criar uma operação? <span>→</span></a></li>
+          <li><a href="#">📄 Como lançar um título? <span>→</span></a></li>
+          <li><a href="#">📄 Como fazer conciliação bancária? <span>→</span></a></li>
+        </ul>
+        <a class="see-all" href="#">Ver todos os artigos →</a>
+      </section>
+
+      <section class="side-card card" id="novidades">
+        <h3>🚀 Novidades da plataforma</h3>
+        <div class="release">
+          <strong>Nova versão 3.6 <span class="badge">Novo</span></strong>
+          <ul>
+            <li>Integração com WhatsApp aprimorada</li>
+            <li>Novo relatório de desempenho</li>
+            <li>Melhorias na tela de operações</li>
+          </ul>
+          <time>Publicado em 01/06/2025</time>
+        </div>
+      </section>
+
+      <section class="side-card card support-card">
+        <h3>📞 Ainda precisa de ajuda?</h3>
+        <p>Se não encontrou a resposta que precisava, abra um ticket diretamente com o time de suporte.</p>
+        <a class="button" href="#">Abrir chamado →</a>
+      </section>
+    </aside>
+  </div>
+
+  <script>
+    const treinamentosPadrao = [
+      {
+        titulo: "Treinamento Comercial",
+        descricao: "Aprenda todo o fluxo comercial: leads, negociações e fechamentos.",
+        conteudo: "Manual inicial do fluxo comercial do Repasys.",
+        duracao: "23 min",
+        video: "",
+        imagem: ""
+      },
+      {
+        titulo: "Treinamento Operacional",
+        descricao: "Como criar, acompanhar e concluir operações.",
+        conteudo: "Manual inicial para criação e acompanhamento das operações.",
+        duracao: "27 min",
+        video: "",
+        imagem: ""
+      },
+      {
+        titulo: "Treinamento Financeiro",
+        descricao: "Lançamentos, conciliação e relatórios financeiros.",
+        conteudo: "Manual inicial do módulo financeiro.",
+        duracao: "26 min",
+        video: "",
+        imagem: ""
+      },
+      {
+        titulo: "Treinamento Administrativo",
+        descricao: "Configurações, usuários, permissões e integrações.",
+        conteudo: "Manual inicial das configurações administrativas.",
+        duracao: "18 min",
+        video: "",
+        imagem: ""
+      }
+    ];
+
+    function limparTexto(valor) {
+      return String(valor || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function getYoutubeEmbed(video) {
+      if (!video) return "";
+
+      let id = "";
+
+      if (video.includes("youtube.com/watch?v=")) {
+        id = video.split("v=")[1];
+      } else if (video.includes("youtu.be/")) {
+        id = video.split("youtu.be/")[1];
+      } else if (video.includes("youtube.com/embed/")) {
+        id = video.split("youtube.com/embed/")[1];
+      }
+
+      if (!id) return "";
+
+      if (id.includes("&")) id = id.split("&")[0];
+      if (id.includes("?")) id = id.split("?")[0];
+
+      return 
+        <div class="video" style="margin-top: 14px;">
+          https://www.youtube.com/embed/${limparTexto(id)}
+        </div>
+      ;
+    }
+
+    function renderTreinamentos() {
+      const container = document.getElementById("listaTreinamentos");
+      const treinamentosSalvos = JSON.parse(localStorage.getItem("treinamentos")) || [];
+      const todosTreinamentos = [...treinamentosPadrao, ...treinamentosSalvos];
+
+      if (!container) return;
+
+      container.innerHTML = todosTreinamentos.map((t) => {
+        const titulo = limparTexto(t.titulo || t.tituloManual || "Treinamento sem título");
+        const descricao = limparTexto(t.descricao || "");
+        const conteudo = limparTexto(t.conteudo || "");
+        const duracao = limparTexto(t.duracao || "Manual");
+        const imagem = t.imagem || "";
+        const video = t.video || "";
+
+        return 
+          <article class="training-item">
+            <div class="play">▶</div>
+            <div>
+              <h4>${titulo}</h4>
+              ${descricao ? `<p>${descricao}</p>` : ""}
+              ${conteudo ? `<p style="margin-top: 8px;">${conteudo}</p>` : ""}
+              ${getYoutubeEmbed(video)}
+              ${imagem ? `<img src="${imagem}" alt="Captura de tela do treinamento" style="max-width: 260px; margin-top: 12px; border-radius: 12px; display: block;">` : ""}
+            </div>
+            <span class="duration">${duracao}</span>
+          </article>
+        ;
+      }).join("");
+    }
+
+    renderTreinamentos();
+  </script>
+</body>
+</html>
